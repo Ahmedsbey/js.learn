@@ -14,7 +14,7 @@ console.log(`you name is ${name1} and your age  is ${age}`);
 console.log(name1.toUpperCase())
 console.log(name1.toLowerCase)
 console.log(name1.length)
-console.log(name1.slice(1,4))
+console.log(name1.slice(1,4)) 
 console.log(name1.slice(1))
 console.log(name1.replace("Ah","Moham"))
 console.log(name1.concat(n," Raza"))
@@ -34,7 +34,9 @@ console.log(Newstr.charCodeAt(0))
 for( code = 0; code < Newstr.length  ; code++){
     console.log(Newstr[code].charCodeAt().toString())
 }
-
 console.log(Newstr.codePointAt(3))
 
 
+console.log(
+  `  ${Newstr.endsWith("i",4)}`
+  )
