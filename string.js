@@ -39,4 +39,12 @@ console.log(Newstr.codePointAt(3))
 
 console.log(
   `  ${Newstr.endsWith("i",4)}`
-  )
+  ) // expected output true
+
+console.log(
+  `  ${Newstr.includes("i",3)}`
+  ) // expected output true
+
+  console.log(
+    `  ${Newstr.isWell("i",3)}`
+    ) 
