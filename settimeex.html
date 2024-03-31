@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Javascript</p>
+    <button id="Stop">Stop</button>
+
+    <script>
+        function chngtext(){
+            document.querySelector('#text').innerHTML = 'Ahmad  raza'
+        }
+     let set =   setTimeout(chngtext,2000)
+        document.querySelector('#Stop').addEventListener('click',()=>{
+            clearTimeout(set)
+        })
+    </script>
+</body>
+</html>
