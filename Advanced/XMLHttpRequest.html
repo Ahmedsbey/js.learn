@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 500px;
+        }
+        .box img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="background: #212121; color: #ffffff;">
+    
+<div class="box">
+<!-- <img src="" alt="image"> -->
+<!-- <p>Followers:</p> -->
+</div>
+
+
+    <script>
+        const box = document.querySelector('.box')
+        const requestUrl = 'https://api.github.com/users/ahmedsbey'
+        let xhr = new XMLHttpRequest()
+        xhr.open('GET',requestUrl)
+        xhr.send()
+        xhr.onreadystatechange =  function(){
+            const data = JSON.parse(this.responseText)
+            if(xhr.readyState ===4){
+        console.log(data.followers)
+        box.innerHTML = `
+                            <img src="${data.avatar_url}" alt="image">
+                            <p>UserName: ${data.name}</p>
+                                <p>Followers: ${data.followers}</p>
+        
+        `
+    }
+        }
+
+    </script>
+</body>
+</html>
